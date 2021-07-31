@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
 import { TablesComponent } from './tables/tables.component';
 import { TableRowComponent } from './table-row/table-row.component';
+import { GrandtotalComponent } from './grandtotal/grandtotal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FormsComponent,
     TablesComponent,
-    TableRowComponent
+    TableRowComponent,
+    GrandtotalComponent
   ],
   imports: [
     BrowserModule,

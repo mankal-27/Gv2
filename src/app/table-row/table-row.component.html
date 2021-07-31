@@ -1,7 +1,23 @@
-<tr *ngFor = "let index of product">
-    <td>{{index.name}}</td>
-    <td>{{index.unit}}</td>
-    <td>{{index.amount}}</td>
-    <td>{{index.total}}</td>
-    <td> <i class="fas fa-trash-alt" type="button" (click)="Deleteme(index)"></i></td>
-</tr>
+    <thead>
+        <tr>
+            <td>ItemName</td>
+            <td>Unit</td>
+            <td>Amount</td>
+            <td>Total</td>
+            <td>Action</td>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let index of product ; let i = index ">
+        
+            <td>{{index.name}}</td>
+            <td>{{index.unit}}</td>
+            <td>{{index.amount}}</td>
+            <td>{{index.total}}</td>      
+            <td> <i class="fas fa-trash-alt" type="button" (click)="Deleteme(i)"></i></td>
+        </tr>
+    </tbody>
+
+    
+
+

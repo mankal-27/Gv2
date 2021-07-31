@@ -7,7 +7,6 @@ import { GserviceService } from '../gservice.service';
   styleUrls: ['./table-row.component.css']
 })
 export class TableRowComponent implements OnInit {
-
   constructor(
     private prod :GserviceService
   ) { }
@@ -17,7 +16,7 @@ export class TableRowComponent implements OnInit {
     this.product = this.prod.getData();
   }
   
-  Deleteme(){
-    console.log("I am deletable")
+  Deleteme(element : number){
+    console.log(this.product)
   }
 }

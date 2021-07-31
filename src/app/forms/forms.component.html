@@ -5,16 +5,11 @@
         <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
             <input type = "text" name = "itemname" placeholder = "Item Name" ngModel>
           
-            <input type = "number" step="0.01" name = "unit" placeholder = "Quantity" ngModel>
+            <input type = "number" name = "unit" placeholder = "Quantity" ngModel>
           
             <input type = "number" step="0.01" name = "amount" placeholder = "Amount" ngModel>
             
             <input type = "submit" value = "Add to Cart">
           </form>
     </div>
-    
-<div>
-    
-</div>
-<app-tables> </app-tables>
 </div>
