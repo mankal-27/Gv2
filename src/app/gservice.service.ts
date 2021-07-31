@@ -5,15 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class GserviceService {
   sharedProduct = new Array;
+
+
   constructor() { }
-  setData(data: any[]){
+  setData(data: any[], ){
 
     this.sharedProduct = data;
+
 
   }
 
   getData(){
     
-    return this.sharedProduct;
+    return this.sharedProduct ;
   }
 }

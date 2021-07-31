@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GserviceService } from '../gservice.service';
 
 @Component({
@@ -7,16 +7,22 @@ import { GserviceService } from '../gservice.service';
   styleUrls: ['./table-row.component.css']
 })
 export class TableRowComponent implements OnInit {
+
+  @Input() grandTotal : any;
   constructor(
-    private prod :GserviceService
+    private prod :GserviceService,
   ) { }
   product = new Array
   ngOnInit(): void {
 
     this.product = this.prod.getData();
+
   }
   
   Deleteme(element : number){
-    console.log(this.product)
+    const data = this.product
+    this.product.splice(element,1);
+    console.log(this.grandTotal);
+
   }
 }

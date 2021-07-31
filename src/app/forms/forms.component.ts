@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { GserviceService } from '../gservice.service';
 
@@ -18,8 +18,7 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {
     this.prod.setData(this.product)
   }
-  
-  grandTotal = 0 ;
+  @Input() grandTotal:any;
   onSubmit(myform : NgForm){
     this.product.push(
       {
@@ -28,12 +27,12 @@ export class FormsComponent implements OnInit {
        amount : myform.value.amount,
        total : myform.value.unit * myform.value.amount
       })
-      //console.log(this.product)
-      this.grandTotal = this.product.reduce(function (accumulator, item) {
-             let temptotal  = (accumulator + item.total)
-             return temptotal;
-           }, 0);  
-          // console.log(this.grandTotal);
+      console.log(this.product)
+       this.grandTotal = this.product.reduce(function (accumulator, item) {
+              let temptotal  = (accumulator + item.total)
+              return temptotal;
+            }, 0);  
+           console.log(this.grandTotal);
         }
     
         
